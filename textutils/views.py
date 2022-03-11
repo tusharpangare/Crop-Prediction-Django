@@ -1,10 +1,8 @@
 # I have created this file - tusharpangare ©
-from __future__ import print_function
+
 import pandas as pd 
 import numpy as np   
-from sklearn.metrics import classification_report   
 from sklearn import metrics    
-from sklearn.model_selection import cross_val_score
 from django.http import HttpResponse
 from django.shortcuts import render
 from sklearn.model_selection import train_test_split
@@ -28,7 +26,6 @@ def analyze(request):
     acc.append(x)
     model.append('RF')
 
-
     N = request.POST.get('nitrogen', 'default')
     P = request.POST.get('phosphorous', 'default')
     K = request.POST.get('potassium', 'default')
@@ -41,3 +38,4 @@ def analyze(request):
     result = RF.predict([userInput])[0]
     params = {'purpose':'Predicted Crop: ', 'analyzed_text': result.upper()}
     return render(request, 'analyze.html', params)    
+    
