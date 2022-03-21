@@ -24,7 +24,7 @@ def analyze(request):
     # we'll use rf.fit to build a forest of trees from the training set (X, y).
     RF.fit(x_train,y_train)
     # at this stage our algorithm is trained and ready to use
-
+    
     # take values from user
     N = request.POST.get('nitrogen', 'default')
     P = request.POST.get('phosphorous', 'default')
