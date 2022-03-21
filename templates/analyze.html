@@ -4,7 +4,31 @@
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <style>
 
+      div.container{border-style: double;
+      background-image: url("https://thumbs.dreamstime.com/b/rice-farm-blur-background-drop-bamboo-hut-rice-farm-blur-background-drop-water-rain-bamboo-hut-easy-life-123117043.jpg");}
+  
+      div.friend2field{
+        font-weight: bold;
+        display: grid;
+        grid-template-columns: 1fr 3fr;
+      }
+      body {
+        background-image: url('https://images.unsplash.com/photo-1625246333195-78d9c38ad449?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80');
+      }
+  
+      .btn{
+        float:right;
+        font-weight: bold;
+        border: 5px solid #555555;
+  
+  
+  
+      }
+  
+  
+      </style>
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
 
@@ -44,11 +68,10 @@
 
 <div class="container">
 
-<h3>Your Predicted Crop -  </h3>
-<h1>
-  <pre>{{ analyzed_text }}</pre>
-
-</h1>
+  <h3>Your Predicted Crop -  </h3>
+  <h1>
+    <pre>{{ analyzed_text }}</pre>
+  </h1>
 </div>
 
 

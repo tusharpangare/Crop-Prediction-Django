@@ -1,8 +1,6 @@
 # I have created this file - tusharpangare ©
 
-import pandas as pd 
-import numpy as np   
-from sklearn import metrics    
+import pandas as pd   
 from django.http import HttpResponse
 from django.shortcuts import render
 from sklearn.model_selection import train_test_split
@@ -14,18 +12,20 @@ def index(request):
 def analyze(request):
     crop = pd.read_csv("E:/Myspace_tushar/Project/Crop Prediction ML/Crop_recommendation.csv")
     crop.columns = crop.columns.str.replace(' ', '') 
+    # we have given 7 features to the algorithm
     features = crop[['N', 'P','K','temperature', 'humidity', 'ph', 'rainfall']]
+    # dependent variable is crop
     target = crop['label']
-    acc = []
-    model = []
+    # our model will contain training and testing data
     x_train, x_test, y_train, y_test = train_test_split(features,target,test_size = 0.2,random_state =2)
+    # here n_estimators is The number of trees in the forest.
+    # random_state is for controlling  the randomness of the bootstrapping
     RF = RandomForestClassifier(n_estimators=20, random_state=0)
+    # we'll use rf.fit to build a forest of trees from the training set (X, y).
     RF.fit(x_train,y_train)
-    predicted_values = RF.predict(x_test)
-    x = metrics.accuracy_score(y_test, predicted_values)
-    acc.append(x)
-    model.append('RF')
+    # at this stage our algorithm is trained and ready to use
 
+    # take values from user
     N = request.POST.get('nitrogen', 'default')
     P = request.POST.get('phosphorous', 'default')
     K = request.POST.get('potassium', 'default')
@@ -34,8 +34,11 @@ def analyze(request):
     ph =request.POST.get('ph', 'default')
     rainfall = request.POST.get('rainfall', 'default')
 
+    # make a list of user input
     userInput = [N, P, K, temp, humidity, ph, rainfall]
+    # use trained model to predict the data based on user input
     result = RF.predict([userInput])[0]
+    # display  result to the user
     params = {'purpose':'Predicted Crop: ', 'analyzed_text': result.upper()}
     return render(request, 'analyze.html', params)    
     
