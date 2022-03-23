@@ -42,3 +42,5 @@ def analyze(request):
     params = {'purpose':'Predicted Crop: ', 'analyzed_text': result.upper()}
     return render(request, 'analyze.html', params)    
     
+def about_us(request):
+    return render(request, 'About_us.html')    

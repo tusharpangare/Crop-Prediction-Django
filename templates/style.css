@@ -1,0 +1,84 @@
+/*OurTeam Start*/
+.team{
+    padding: 100px 0px;
+    background-image: url(https://i.postimg.cc/pVhWpJzL/background.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: fixed;
+}
+.team_top h1{
+    text-transform: uppercase;
+    color: #00cdcd;
+    font-size: 60px;
+    font-weight: 700;
+}
+.team_top p{
+    font-size: 18px;
+    font-weight: 500;
+    max-width: 750px;
+    margin: 0 auto;
+}
+.member{
+    position: relative;
+    margin-top: 70px;
+    margin-bottom: 70px;
+    background-color: #fff;
+    padding: 20px;
+}
+.img img{
+    width: 130px;
+    border-radius: 50%;
+}
+.m_text h3{
+    font-weight: 800;
+    font-size: 22px;
+    margin-top: 20px;
+    color: #00cdcd;
+}
+.m_text h5{
+    font-size: 18px;
+    margin-bottom: 20px;
+}
+.m_text p{
+    font-weight: 400;
+    line-height: 30px;
+    letter-spacing: 1px;
+    margin-bottom: 0px;
+}
+.m_menu{
+    margin: 0;
+    padding: 0;
+    position: absolute; 
+    left: 0;
+    right: 0;
+    bottom: -35px;
+    background: #fff;
+    padding: 10px;
+    opacity: 0;
+}
+.m_menu ul{
+    margin-bottom: 0px;
+}
+.m_menu ul li a i{
+    color: #F2CE5F;
+}
+.m_menu ul li a{
+    display: block;
+    padding: 7px;
+    font-size: 18px;
+}
+.member:hover .m_menu{
+    opacity: 1;
+    bottom: -40px;
+    transition: all 0.5s ease-in-out;
+    -webkit-transition: all 0.5s ease-in-out;
+    -moz-transition: all 0.5s ease-in-out;
+}
+.member:hover .m_text h3{
+    color: #F2CE5F;
+    transition: all 0.5s ease-in-out;
+    -webkit-transition: all 0.5s ease-in-out;
+    -moz-transition: all 0.5s ease-in-out;
+}
+/*OurTeam end*/
