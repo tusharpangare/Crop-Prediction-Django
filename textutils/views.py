@@ -10,7 +10,7 @@ def index(request):
     return render(request, 'index.html')
 
 def analyze(request):
-    crop = pd.read_csv("E:/Myspace_tushar/Project/Crop Prediction ML/Crop_recommendation.csv")
+    crop = pd.read_csv("D:/Myspace_Tushar/Crop_Prediction/dataset/Crop_recommendation.csv")
     crop.columns = crop.columns.str.replace(' ', '') 
     # we have given 7 features to the algorithm
     features = crop[['N', 'P','K','temperature', 'humidity', 'ph', 'rainfall']]
