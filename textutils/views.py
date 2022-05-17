@@ -9,7 +9,7 @@ def index(request):
     return render(request, 'index.html')
 
 def analyze(request):
-    crop = pd.read_csv("D:/Myspace_Tushar/Crop_Prediction/dataset/Crop_recommendation.csv")
+    crop = pd.read_csv("dataset/Crop_recommendation.csv")
 
     # remove duplicate values
     crop.drop_duplicates()
