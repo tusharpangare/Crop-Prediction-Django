@@ -13,4 +13,5 @@
 
 - 🧑‍🌾:Result in a moment
 ---
-### 🖱️: Deployed Here :https://crop-prediction-rf.herokuapp.com/
+### 🖱️: Deployed Here:
+-  https://crop-prediction-rf.herokuapp.com/
