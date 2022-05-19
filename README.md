@@ -7,11 +7,11 @@
 
 ---
 ### :woman_technologist: About: 
-- 🍁: Prediction of suitable crop using soil and weather conditions.
+- 🍁 Prediction of suitable crop using soil and weather conditions.
 
 - :seedling: Minimize human errors.
 
-- 🧑‍🌾:Result in a moment
+- 🧑‍🌾Result in a moment
 ---
 ### 🖱️: Deployed Here:
 -  https://crop-prediction-rf.herokuapp.com/
